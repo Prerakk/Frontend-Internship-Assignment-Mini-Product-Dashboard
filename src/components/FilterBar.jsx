@@ -23,14 +23,14 @@ export default function FilterBar({ products, setFiltered }) {
       <input
         type="text"
         placeholder="Search by name..."
-        className="border p-2 rounded"
+        className="border border-gray-300 p-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <select className="border p-2 rounded" onChange={(e) => setCategory(e.target.value)}>
+      <select className="border border-gray-300 p-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" onChange={(e) => setCategory(e.target.value)}>
         {categories.map((cat, i) => <option key={i} value={cat}>{cat}</option>)}
       </select>
-      <select className="border p-2 rounded" onChange={(e) => setSort(e.target.value)}>
+      <select className="border border-gray-300 p-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" onChange={(e) => setSort(e.target.value)}>
         <option value="">Sort</option>
         <option value="low">Price: Low → High</option>
         <option value="high">Price: High → Low</option>
